@@ -1,1 +1,1 @@
-# gallery
+# three.js image gallery
