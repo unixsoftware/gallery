@@ -247,3 +247,18 @@ function addLights(frameBBox) {
     lights.push(light);
   }
 }
+
+
+
+
+
+
+//for mobile mode
+window.addEventListener('load', function() {
+  // Полноэкранный режим для Chrome на Android
+  if (window.navigator.standalone && window.matchMedia('(display-mode: standalone)').matches) {
+    // Приложение открыто в режиме "приложения на рабочем столе" (без адресной строки)
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+    document.documentElement.style.height = 'calc(var(--vh, 1vh) * 100)';
+  }
+});
